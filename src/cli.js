@@ -1,4 +1,5 @@
 const minimist = require('minimist')
+const error = require('./utils/error')
 
 module.exports = () => {
   // get the arguments
@@ -7,29 +8,22 @@ module.exports = () => {
   // get the command or default to help
   let cmd = args._[0] || 'help'
 
-  // set command as version when passed
-  if (args.version || args.v) {
-    cmd = 'version'
-  }
-
-  // set command as help when passed
-  if (args.help || args.h) {
-    cmd = 'help'
-  }
-
   // menu choices
   switch (cmd) {
     case 'generate':
+    case 'g':
       require('./commands/generate')(args)
       break
     case 'version':
+    case 'v':
       require('./commands/version')(args)
       break
     case 'help':
+    case 'h':
       require('./commands/help')(args)
       break
     default:
-      console.error(`"${cmd}" is not a valid command!`)
+      error(`"${cmd}" is not a valid command!`, true)
       break
   }
 }
