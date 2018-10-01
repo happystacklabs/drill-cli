@@ -1,0 +1,11 @@
+{
+  "name": "drill-cli",
+  "version": "0.0.0",
+  "description": "Better use a drill than a screwdriver to build your React Native apps.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Heinrich Tremblay",
+  "license": "ISC"
+}
