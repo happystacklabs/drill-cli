@@ -1,11 +1,22 @@
 {
   "name": "drill-cli",
-  "version": "0.0.0",
-  "description": "Better use a drill than a screwdriver to build your React Native apps.",
-  "main": "index.js",
+  "version": "1.0.0",
+  "description": "A React Native CLI that know the drill",
+  "main": "src/cli.js",
+  "bin": {
+    "drill": "bin/drill"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/happystacklabs/drill-cli.git"
+  },
   "author": "Heinrich Tremblay",
-  "license": "ISC"
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/happystacklabs/drill-cli/issues"
+  },
+  "homepage": "https://github.com/happystacklabs/drill-cli"
 }
