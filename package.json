@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/happystacklabs/drill-cli/issues"
   },
-  "homepage": "https://github.com/happystacklabs/drill-cli"
+  "homepage": "https://github.com/happystacklabs/drill-cli",
+  "dependencies": {
+    "minimist": "^1.2.0"
+  }
 }
