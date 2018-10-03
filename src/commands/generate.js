@@ -1,9 +1,10 @@
-const ora = require('ora')
-const chalk = require('chalk');
+const chalk = require('chalk')
 const inquirer = require('inquirer')
 const _ = require('lodash')
+const ejs = require('ejs')
+const fs = require('fs');
 const ui = require('../utils/ui')
-
+const makeStatelessComponent = require('./subCommands/makeStatelessComponent')
 
 module.exports = (args) => {
   // print header
@@ -37,13 +38,12 @@ module.exports = (args) => {
   inquirer
     .prompt([question1, question2, question3])
     .then(answers => {
-      const name = _.capitalize(answers.name)
-
-      console.log(`Generating ${name} ${answers.type}...`)
+      const { name, test } = answers;
+      const nameUppercase = _.upperFirst(name)
 
       switch (answers.type) {
         case 'Stateless Component':
-          console.log('Stateless Component');
+          makeStatelessComponent(nameUppercase, test)
           break
         case 'Class Component':
           console.log('Class Component');
@@ -57,10 +57,4 @@ module.exports = (args) => {
     })
 
 
-
-  // const spinner = ora().start()
-  // console.log(args)
-  // await new Promise(resolve => setTimeout(resolve, 5000))
-  // spinner.stop()
-  // console.log('Generate!')
 }
