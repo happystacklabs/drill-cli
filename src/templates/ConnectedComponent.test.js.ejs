@@ -1,0 +1,16 @@
+/**
+ * @format
+ * @flow
+ */
+import React from "react";
+import renderer from "react-test-renderer";
+import { Text } from "react-native";
+import { <%= name %> } from "../<%= name %>";
+
+describe("Features::FEATURE-NAME::<%= name %>", () => {
+  test("render text", () => {
+    const instance = renderer.create(<<%= name %> />);
+    const textInstance = instance.root.findByType(Text);
+    expect(textInstance.props.children).toBe("<%= name %>");
+  });
+});

@@ -1,0 +1,36 @@
+/**
+ * @format
+ * @flow
+ */
+import React, { Component } from "react";
+import { connect } from "react-redux";
+// import type { Dispatch } from "./Libs/types";
+
+type State = {};
+type Props = {};
+export class <%= name %> extends Component<Props, State> {
+  this.state = {};
+
+  componentDidMount() {}
+
+  render() {
+    return (
+      <View style={styles.container}>
+        <Text><%= name %></Text>
+      </View>
+    );
+  }
+}
+
+const mapStateToProps = (state: Object): State => {
+  return {};
+};
+
+const mapDispatchToProps = (dispatch) => { // dispatch: Dispatch
+  return {};
+};
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(<%= name %>);

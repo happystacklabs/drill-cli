@@ -5,6 +5,8 @@ const ejs = require('ejs')
 const fs = require('fs');
 const ui = require('../utils/ui')
 const makeStatelessComponent = require('./subCommands/makeStatelessComponent')
+const makeClassComponent = require('./subCommands/makeClassComponent')
+const makeConnectedComponent = require('./subCommands/makeConnectedComponent')
 
 module.exports = (args) => {
   // print header
@@ -46,10 +48,10 @@ module.exports = (args) => {
           makeStatelessComponent(nameUppercase, test)
           break
         case 'Class Component':
-          console.log('Class Component');
+          makeClassComponent(nameUppercase, test)
           break
         case 'Connected Component':
-          console.log('Connected Component');
+          makeConnectedComponent(nameUppercase, test)
           break
         default:
           break
