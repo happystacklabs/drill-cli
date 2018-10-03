@@ -1,6 +1,6 @@
 {
   "name": "drill-cli",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "A React Native CLI that know the drill",
   "main": "src/cli.js",
   "bin": {
